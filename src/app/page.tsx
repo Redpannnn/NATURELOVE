@@ -2,7 +2,9 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, MapPin, Eye, EyeOff, Copy, Check, Send, Loader2, User, Users, MessageSquare, ArrowLeft } from "lucide-react";
+import { ChevronDown, MapPin, Eye, EyeOff, Copy, Check, Send, Loader2, User, Users, MessageSquare, ArrowLeft, Download } from "lucide-react";
+
+const IS_DEV = process.env.NODE_ENV === "development";
 
 const BG_IMAGE = "https://imglinkv-3.vercel.app/api/images/cmsac9m9ab5dyc1i3/file";
 const LEAF_IMAGE = "https://imglinkv-3.vercel.app/api/images/cmsabzmato2b3b4l0/file";
@@ -856,6 +858,16 @@ export default function WeddingInvitation() {
         Back to Template
       </a>
       <AnimatePresence mode="wait">{slides[currentSlide]}</AnimatePresence>
+      {IS_DEV && (
+        <a
+          href="/api/download"
+          className="fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full bg-amber-900 px-4 py-2.5 text-white shadow-lg transition-all hover:bg-amber-800 hover:shadow-xl"
+          style={{ fontFamily: "var(--font-cormorant)", fontWeight: 600, fontSize: "clamp(0.75rem, 2vw, 0.9rem)" }}
+        >
+          <Download className="h-3.5 w-3.5" />
+          Download
+        </a>
+      )}
     </main>
   );
 }

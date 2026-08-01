@@ -1,5 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
-import { db } from "@/lib/db";
+
+interface RsvpEntry {
+  id: string;
+  name: string;
+  attending: string;
+  guests: number;
+  wishes: string | null;
+  createdAt: string;
+}
+
+const rsvpStore = new Map<string, RsvpEntry>();
 
 export async function POST(req: NextRequest) {
   try {
@@ -13,18 +23,20 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const entry = await db.rsvpEntry.create({
-      data: {
-        name: String(name).trim(),
-        attending: String(attending),
-        guests: Number(guests) || 1,
-        wishes: wishes ? String(wishes).trim() : null,
-      },
-    });
+    const id = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+    const entry: RsvpEntry = {
+      id,
+      name: String(name).trim(),
+      attending: String(attending),
+      guests: Number(guests) || 1,
+      wishes: wishes ? String(wishes).trim() : null,
+      createdAt: new Date().toISOString(),
+    };
+
+    rsvpStore.set(id, entry);
 
     return NextResponse.json({ success: true, data: entry }, { status: 201 });
-  } catch (error) {
-    console.error("RSVP error:", error);
+  } catch {
     return NextResponse.json(
       { error: "Gagal mengirim RSVP" },
       { status: 500 }
@@ -34,12 +46,11 @@ export async function POST(req: NextRequest) {
 
 export async function GET() {
   try {
-    const entries = await db.rsvpEntry.findMany({
-      orderBy: { createdAt: "desc" },
-    });
+    const entries = Array.from(rsvpStore.values()).sort(
+      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    );
     return NextResponse.json({ data: entries });
-  } catch (error) {
-    console.error("RSVP fetch error:", error);
+  } catch {
     return NextResponse.json(
       { error: "Gagal mengambil data RSVP" },
       { status: 500 }
