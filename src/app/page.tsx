@@ -136,11 +136,11 @@ function CountdownTimer({ target }: { target: Date }) {
 }
 
 const GALLERY_IMAGES = [
-  "https://i.pinimg.com/736x/c4/0c/2c/c40c2c753f502dd597d174c264edabaf.jpg",
-  "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&h=400&fit=crop",
+  "https://imglinkv-3.vercel.app/api/images/cmvu0r65sqe9efc27/file",
+  "https://imglinkv-3.vercel.app/api/images/cmvu0r54t8gyk3tq2/file",
+  "https://imglinkv-3.vercel.app/api/images/cmvu0r41xirpxkrnf/file",
+  "https://imglinkv-3.vercel.app/api/images/cmvu0r2wd1bne5amr/file",
+  "https://imglinkv-3.vercel.app/api/images/cmvu0r1norr59hbxd/file",
 ];
 const YOUTUBE_ID = "tGv7CUutzqU";
 
@@ -165,8 +165,7 @@ function GallerySection() {
         <img
           src={GALLERY_IMAGES[activeIdx]}
           alt={`Gallery ${activeIdx + 1}`}
-          className="h-auto w-full object-cover"
-          style={{ maxHeight: "300px" }}
+          className="aspect-[4/5] w-full object-cover"
         />
       </div>
 
@@ -248,9 +247,9 @@ function Slide2({ onPrev }: { onPrev: () => void }) {
           >
             <div className="h-40 w-40 overflow-hidden rounded-full border-4 border-amber-900/20 bg-amber-100">
               <img
-                src="https://i.pinimg.com/736x/c4/0c/2c/c40c2c753f502dd597d174c264edabaf.jpg"
+                src="https://imglinkv-3.vercel.app/api/images/cmvu0r0czppjl1mkm/file"
                 alt="Tama"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-[50%_28%]"
               />
             </div>
             <h3
@@ -275,9 +274,9 @@ function Slide2({ onPrev }: { onPrev: () => void }) {
           >
             <div className="h-40 w-40 overflow-hidden rounded-full border-4 border-amber-900/20 bg-amber-100">
               <img
-                src="https://i.pinimg.com/736x/c4/0c/2c/c40c2c753f502dd597d174c264edabaf.jpg"
+                src="https://imglinkv-3.vercel.app/api/images/cmvu0qyoeg5f0zpba/file"
                 alt="Septi"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-[50%_25%]"
               />
             </div>
             <h3
