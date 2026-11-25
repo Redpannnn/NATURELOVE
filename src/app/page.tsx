@@ -6,8 +6,8 @@ import { ChevronDown, MapPin, Eye, EyeOff, Copy, Check, Send, Loader2, User, Use
 
 const IS_DEV = process.env.NODE_ENV === "development";
 
-const BG_IMAGE = "https://imglinkv-3.vercel.app/api/images/cmsac9m9ab5dyc1i3/file";
-const LEAF_IMAGE = "https://imglinkv-3.vercel.app/api/images/cmsabzmato2b3b4l0/file";
+const BG_IMAGE = "https://ik.imagekit.io/au8q7zdvt/ORNAMEN%20&%20SOMETHING/KERTAS.jpg?updatedAt=1795644655967";
+const LEAF_IMAGE = "https://ik.imagekit.io/au8q7zdvt/ORNAMEN%20&%20SOMETHING/LEAF%20AUTM.png";
 const WEDDING_DATE = new Date("2029-05-24T09:00:00+07:00");
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Kp.+Tipar+Peuntas+RT+044%2FRW+009,+Cibolang+Kaler,+Cisaat,+Sukabumi+43152";
 
@@ -136,11 +136,11 @@ function CountdownTimer({ target }: { target: Date }) {
 }
 
 const GALLERY_IMAGES = [
-  "https://imglinkv-3.vercel.app/api/images/cmvu0r65sqe9efc27/file",
-  "https://imglinkv-3.vercel.app/api/images/cmvu0r54t8gyk3tq2/file",
-  "https://imglinkv-3.vercel.app/api/images/cmvu0r41xirpxkrnf/file",
-  "https://imglinkv-3.vercel.app/api/images/cmvu0r2wd1bne5amr/file",
-  "https://imglinkv-3.vercel.app/api/images/cmvu0r1norr59hbxd/file",
+  "https://ik.imagekit.io/au8q7zdvt/ORNAMEN%20&%20SOMETHING/COUPLE%201.jpg?updatedAt=1795644655974",
+  "https://ik.imagekit.io/au8q7zdvt/ORNAMEN%20&%20SOMETHING/COUPLE%202.jpg?updatedAt=1795644655981",
+  "https://ik.imagekit.io/au8q7zdvt/ORNAMEN%20&%20SOMETHING/COUPLE%203.jpg?updatedAt=1795644655921",
+  "https://ik.imagekit.io/au8q7zdvt/ORNAMEN%20&%20SOMETHING/COUPLE%204.jpg?updatedAt=1795644656010",
+  "https://ik.imagekit.io/au8q7zdvt/ORNAMEN%20&%20SOMETHING/COUPLE%205.jpg?updatedAt=1795644655874",
 ];
 const YOUTUBE_ID = "tGv7CUutzqU";
 
@@ -247,7 +247,7 @@ function Slide2({ onPrev }: { onPrev: () => void }) {
           >
             <div className="h-40 w-40 overflow-hidden rounded-full border-4 border-amber-900/20 bg-amber-100">
               <img
-                src="https://imglinkv-3.vercel.app/api/images/cmvu0r0czppjl1mkm/file"
+                src="https://ik.imagekit.io/au8q7zdvt/ORNAMEN%20&%20SOMETHING/LEAF%20AUTM.png"
                 alt="Tama"
                 className="h-full w-full object-cover object-[50%_28%]"
               />
@@ -274,7 +274,7 @@ function Slide2({ onPrev }: { onPrev: () => void }) {
           >
             <div className="h-40 w-40 overflow-hidden rounded-full border-4 border-amber-900/20 bg-amber-100">
               <img
-                src="https://imglinkv-3.vercel.app/api/images/cmvu0qyoeg5f0zpba/file"
+                src="https://ik.imagekit.io/au8q7zdvt/ORNAMEN%20&%20SOMETHING/LEAF%20AUTM.png"
                 alt="Septi"
                 className="h-full w-full object-cover object-[50%_25%]"
               />
